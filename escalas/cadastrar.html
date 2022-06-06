@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style_cad.css" rel="stylesheet">
+        <title>Escalas e Agendamentos - Hospital Nossa Senhora das Graças - Versão Beta -</title>
+    </head>
+    <body>
+        <header>
+            <div class="containerTop">  
+                <div class="titulo">
+                    <h1>Escalas e Agendamentos</h1><br>
+                </div>
+
+                <div class="menu">
+                    <div class="menuBarras">
+                        <div class="one"></div>
+                        <div class="two"></div>
+                        <div class="three"></div>
+                    </div>
+
+                    <nav>
+                        <ul>
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Cadastrar</a></li>
+                            <li><a href="#">Consultar</a></li>
+                            <li><a href="#">Sair</a></li>
+                        </ul>
+                    </nav>
+                </div>       
+            </div>
+        </header>
+        
+        <script src="js/menu.js"></script>
+
+        <section class="containerMid">
+            <div class="dadosFuncionario">
+
+                    <a href="#" class="botao"><img src="/img/ico/loupe.svg" alt="Pesquisa" width="20px" height="20px"></a>
+                    <input type="text" class="buscaTexto" name="cartaoPonto" placeholder="Número do cartão ponto" title="Informe o cartão ponto do colaborador"required>                   
+
+                    <label for="nomeFuncionario">Nome</label>
+                     <input type="text" name="nome" placeholder="Nome do funcionário" title="Nome do colaborador">
+
+                    <label for="cartaoFuncionario">Cartão Ponto</label>
+                    <input type="number" name="cPonto" placeholder="Cartão ponto" title="Cartão ponto do colaborador">
+
+                    <label for="cargoFuncionario">Cargo</label>
+                    <input type="text" name="cargo" placeholder="Tipo de colaborador" title="Cargo do colaborador">
+
+                    <label for="cpfFuncionario">CPF</label>
+                    <input type="number" name="cpf" placeholder="CPF colaborador" title="CPF do colaborador">
+
+                    <label for="unidadeFuncionario">Unidade</label>
+                    <input type="text" name="unidade" placeholder="Unidade de apoio" title="Unidade de apoio">
+
+                    <label for="aniversarioFuncionario">CPF</label>
+                    <input type="number" name="aniversario" placeholder="Data de nascimento" title="Data de nascimento">
+
+            </div> 
+        </section>
+        
+    </body>
+</html>

@@ -1,0 +1,185 @@
+/********************************
+#################################
+###### DEFAULT BY @JSRIGHI ######
+#################################
+********************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
+
+:root{
+    --cor0: #F6FFF8;
+    --cor1: #EAF4F4;
+    --cor2: #07C972;
+    --cor3: #0B844B;
+    --cor4: #054D2A;
+    --cor5: #359D9E;
+    --cor6: #22577A;
+
+    --fonte-destaque: 'Lato', sans-serif;
+    --fonte-padrao: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+html, body {
+    height: 100%;
+}
+
+header {
+    background: linear-gradient(90deg, var(--cor2), var(--cor5));
+}
+
+header .containerTop {
+    max-width: 1100px;
+    width: 90%;
+    height: 70px;
+    display: flex; /* permite as config abaixo */
+    justify-content: space-between; /* alinha titulo e opções menu ao centro  pelo eixo X */
+    align-items: center; /* alinha titulo e opções menu ao centro pelo eixo Y *
+    /* justify-content: center;    */    
+    margin: auto; /* alinha titulo e opções menu ao centro pela caixa inteira*/
+}
+
+.titulo h1{
+    font-family: var(--fonte-destaque);
+    margin-right: 50px;
+}
+
+nav ul {
+    display: flex;
+
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--cor1);
+    font-size: 2.1rem;
+    margin-left: 48px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    transition-duration: .7s;
+}
+
+nav ul li a:hover {
+    background-color: var(--cor1);
+    color: var(--cor4);
+    transition: 0.7s;
+}
+
+.containerMid {
+    background: var(--cor1);
+    /* Largura da janela principal */
+    max-width: 1700px;
+    width: 85%;
+    /* Altura da janela principal */
+    height: 90%;
+    /* Alinhamento central*/
+    margin: auto;
+}
+
+.containerMid .pesquisaFuncionario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+}
+
+/* quero travar tudo em 350px */
+
+@media(max-width: 1080px){
+    
+    html {
+        font-size: 50%;
+    }
+}
+
+@media(max-width: 940px) {
+    
+    html {
+        font-size: 40%;
+    }
+}
+
+@media(max-width: 840px) {
+    
+    nav {
+        display: none;
+    }
+
+    .menuBarras {
+        width: 40px;   
+        height: 30px;
+    }
+
+    .one, .two, .three {
+        background: var(--cor0);
+        height: 5px;
+        width: 100%;
+        margin: 6px auto;
+    }
+
+    .menu.on {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(160deg, var(--cor2), var(--cor5));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu.on nav {
+        display: block;
+    }
+
+    .menu.on .menuBarras {
+        position: absolute;
+        right: 20px;
+        top: 20px
+    }
+
+    .menu.on .menuBarras .one {
+        transform: rotate(45deg) translate(12px, 12px);
+    }
+
+    .menu.on .menuBarras .two {
+        opacity: 0;
+    }
+
+    .menu.on .menuBarras .three {
+        transform: rotate(-45deg) translate(3px, -5px);
+    }
+
+    .menu.on nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    .menu.on nav ul li a {
+        transition-duration: 0,7s;
+        font-size: 5rem;
+        line-height: 15rem;
+        margin-left: 0;
+    }
+        
+}
